@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
+import BreezeNavLink from "@/Components/NavLink.vue";
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 
@@ -27,9 +27,24 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <BreezeNavLink :href="route('home')" :active="route().current('home')">
+                                    Home
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
-                                </NavLink>
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('user.index')" :active="route().current('user.index')">
+                                    Users
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('permission.index')" :active="route().current('permission.index')">
+                                    Permission
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('role.index')" :active="route().current('role.index')">
+                                    Role
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('post.index')" :active="route().current('post.index')">
+                                    Post
+                                </BreezeNavLink>
                             </div>
                         </div>
 
